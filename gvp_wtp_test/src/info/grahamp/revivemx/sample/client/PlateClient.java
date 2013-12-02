@@ -1,5 +1,8 @@
 package info.grahamp.revivemx.sample.client;
 
+import info.grahamp.revivemx.sample.client.gps.IGPS_Driver;
+import info.grahamp.revivemx.sample.client.gps.IGPS_Listener;
+import info.grahamp.revivemx.sample.client.gps.mock.TestGPSDriver;
 import info.grahamp.revivemx.sample.shared.ILocations;
 import info.grahamp.revivemx.sample.shared.LocationResponse;
 import info.grahamp.revivemx.sample.shared.PlateResponse;

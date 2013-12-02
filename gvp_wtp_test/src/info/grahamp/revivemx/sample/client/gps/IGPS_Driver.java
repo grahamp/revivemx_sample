@@ -1,4 +1,4 @@
-package info.grahamp.revivemx.sample.client;
+package info.grahamp.revivemx.sample.client.gps;
 
 /**
  * @author grahampoor
@@ -11,8 +11,11 @@ public interface IGPS_Driver extends Runnable {
 	/**
 	 * @param listener
 	 * The implementer of this interface will invoke the called back 
-	 * passed the new value when the location changes.
+	 * passing the new value when the location changes.
 	 */
 	void setListener(IGPS_Listener listener);
+	/**
+	 * This stops the GPS location messages from being sent to the listener.
+	 */
 	void stop();
 }

@@ -1,5 +1,7 @@
-package info.grahamp.revivemx.sample.client;
+package info.grahamp.revivemx.sample.client.gps.mock;
 
+import info.grahamp.revivemx.sample.client.gps.IGPS_Driver;
+import info.grahamp.revivemx.sample.client.gps.IGPS_Listener;
 import info.grahamp.revivemx.sample.shared.ILocations;
 
 import java.util.Date;
