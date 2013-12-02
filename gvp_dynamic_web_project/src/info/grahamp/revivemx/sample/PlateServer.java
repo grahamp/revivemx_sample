@@ -40,7 +40,6 @@ public class PlateServer extends HttpServlet  {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		count_of_plates_served++;
-		System.out.println("PlateServer.doPost: plates served="+this.count_of_plates_served);
 		String id = request.getParameter(CMD_KEY);
 		int plateIndex = Integer.parseInt(id);
 		PlateResponse pr = new PlateResponse(id,PLATE_ID_TO_NUMBER_TABLE[plateIndex-1]);
@@ -49,6 +48,7 @@ public class PlateServer extends HttpServlet  {
 	    PrintWriter out = response.getWriter();
 	    out.println(jsonResponse);	    
 	    out.flush();
+		System.out.println("PlateServer.doPost: plates served="+count_of_plates_served+" this response="+jsonResponse);
 	}
 
 }

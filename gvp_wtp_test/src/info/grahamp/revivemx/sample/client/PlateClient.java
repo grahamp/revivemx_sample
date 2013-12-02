@@ -15,9 +15,7 @@ import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.text.Format;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 
 import com.google.gson.Gson;

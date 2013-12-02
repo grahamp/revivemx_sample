@@ -52,7 +52,6 @@ public class LocationMessageServer extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		count_of_messages_served++;
-		System.out.println("LocationMessageServer.doPost: messages served="+this.count_of_messages_served);
 		String id = request.getParameter(ID_KEY);
 		String location = request.getParameter(LOCATION_KEY);
 		String transaction = request.getParameter(TRANSACTION_ID_KEY);
@@ -63,6 +62,8 @@ public class LocationMessageServer extends HttpServlet {
 	    PrintWriter out = response.getWriter();
 	    out.println(jsonResponse);	    
 	    out.flush();
+		System.out.println("LocationMessageServer: messages served="+this.count_of_messages_served+" this response="+jsonResponse);
+		
 	}
 
 	static public int getCount_of_messages_served() {
