@@ -18,6 +18,10 @@ import com.google.gson.Gson;
  */
 public class PlateServer extends HttpServlet  {
 	private static int count_of_plates_served =0;
+	public static int getCount_of_plates_served() {
+		return count_of_plates_served;
+	}
+
 	private static final long serialVersionUID = 1L;
 	private static final String CMD_KEY = "id";
 	private String[] PLATE_ID_TO_NUMBER_TABLE={"AAA-000","BBB-111","CCC-222","DDD-333","EEE-444","FFF-555","GGG-666","HHH-777","III-888","JJJ-999","KKK-010"};   

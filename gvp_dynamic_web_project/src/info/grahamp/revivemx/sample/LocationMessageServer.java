@@ -26,7 +26,7 @@ public class LocationMessageServer extends HttpServlet {
 	
 	private HashMap<String,String> location_to_message_map= new HashMap<String,String>();
 	   Gson gson = new Gson();
-	private int count_of_messages_served;
+	static private int count_of_messages_served;
 	
     /**
      * @see HttpServlet#HttpServlet()
@@ -63,6 +63,10 @@ public class LocationMessageServer extends HttpServlet {
 	    PrintWriter out = response.getWriter();
 	    out.println(jsonResponse);	    
 	    out.flush();
+	}
+
+	static public int getCount_of_messages_served() {
+		return count_of_messages_served;
 	}
 
 }

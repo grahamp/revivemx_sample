@@ -34,7 +34,8 @@ public class PlateClient implements Runnable , IGPS_Listener {
 
 	private String current_message=null;
 	private int transaction_id = 0; // An id for a sent transaction, so we can
-									// match responses to
+									 // match responses to a specific client server call
+	// Could track client trans actions but seems too much for now.
 	//HashMap<String, String> pendingTransactions = new HashMap<String, String>();
 	private static final String SERVER = "http://localhost:8080/gvp_dynamic_web_project";
 	private static final String PLATE_SERVLET = SERVER + "/PlateServer";

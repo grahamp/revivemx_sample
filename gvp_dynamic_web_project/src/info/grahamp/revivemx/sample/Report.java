@@ -1,6 +1,8 @@
 package info.grahamp.revivemx.sample;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,14 +26,19 @@ public class Report extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		doPost(request,response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		response.setContentType("text/plain");
+		String report ="Total Plates="+PlateServer.getCount_of_plates_served()+ " MessagesServer= "+LocationMessageServer.getCount_of_messages_served();
+		System.out.println(report);
+		PrintWriter out = response.getWriter();
+		out.println(report);	    
+		out.flush();
 	}
 
 }
